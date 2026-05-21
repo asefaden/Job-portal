@@ -20,7 +20,7 @@ app.use(cookieParser());
 const corsOptions = {
     origin: [
         process.env.FRONTEND_URL,
-        'http://localhost:5173',
+        'https://job.app.aletcloud.com',
     ].filter(Boolean),
     credentials: true,
 }
