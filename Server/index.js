@@ -23,7 +23,7 @@ const corsOptions = {
 }
 app.use(cors(corsOptions));
 
-app.get("/",(req,res)=>{
+app.get("/api",(req,res)=>{
     res.send("Welcome to the server");
 })
 
