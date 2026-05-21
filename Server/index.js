@@ -19,6 +19,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 const corsOptions = {
     origin: process.env.FRONTEND_URL || 'https://jop-portal.app.aletcloud.com',
+    origin: [
+        process.env.FRONTEND_URL,
+        'https://jop-portal.app.aletcloud.com',
+        'https://job-portal.app.aletcloud.com'
+    ].filter(Boolean),
     credentials: true,
 }
 app.use(cors(corsOptions));
