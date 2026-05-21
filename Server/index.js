@@ -21,6 +21,7 @@ const corsOptions = {
     origin: [
         process.env.FRONTEND_URL,
         'https://job.app.aletcloud.com',
+        'http://job.app.aletcloud.com',
     ].filter(Boolean),
     credentials: true,
 }
