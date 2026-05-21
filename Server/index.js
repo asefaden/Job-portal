@@ -23,8 +23,11 @@ const corsOptions = {
 }
 app.use(cors(corsOptions));
 
-app.get("/api",(req,res)=>{
-    res.send("Welcome to the server");
+app.get(["/", "/api"], (req, res) => {
+    return res.status(200).json({
+        message: "Welcome to the server",
+        success: true
+    });
 })
 
 const PORT = process.env.PORT || 3000;
