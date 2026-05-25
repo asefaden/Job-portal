@@ -69,7 +69,7 @@ const Signup = () => {
 
     } catch (error) {
       console.log(error.message);
-      toast.error(error.response.data.message)
+      toast.error(error.response?.data?.message || "Signup failed. Please try again.")
     } finally {
       dispatch(setLoading(false));
     }
