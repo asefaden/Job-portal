@@ -7,11 +7,17 @@ import userRouter from "./routes/user.routes.js";
 import companyRouter from "./routes/company.routes.js";
 import jobRouter from "./routes/job.routes.js";
 import applicantionRouter from "./routes/application.routes.js";
+import mongoose from "mongoose"; // Import mongoose
 dotenv.config({});
 
 const app = express();
 
-connectDB()
+// Set Mongoose global options to increase timeouts
+mongoose.set('serverSelectionTimeoutMS', 60000); // Increase server selection timeout to 60 seconds
+mongoose.set('socketTimeoutMS', 60000);        // Increase socket timeout to 60 seconds
+mongoose.set('bufferTimeoutMS', 60000);       // Increase buffering timeout to 60 seconds
+
+connectDB();
 
 // middlewares
 app.use(express.json());
