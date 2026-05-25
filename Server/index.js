@@ -30,10 +30,10 @@ app.get("/api",(req,res)=>{
 const PORT = process.env.PORT || 3000;
 
 
-app.use("/v1/user", userRouter);
-app.use("/v1/company", companyRouter);
-app.use("/v1/job", jobRouter);
-app.use("/v1/application", applicantionRouter);
+app.use("/api/v1/user", userRouter);
+app.use("/api/v1/company", companyRouter);
+app.use("/api/v1/job", jobRouter);
+app.use("/api/v1/application", applicantionRouter);
 
 
 app.listen(PORT, () => {
