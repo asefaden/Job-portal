@@ -1,7 +1,0 @@
-Client/
-**/node_modules
-**/.env
-**/dist
-.git
-.gitignore
-README.md
