@@ -13,9 +13,9 @@ dotenv.config({});
 const app = express();
 
 // Set Mongoose global options to increase timeouts
-mongoose.set('serverSelectionTimeoutMS', 60000); // Increase server selection timeout to 60 seconds
-mongoose.set('socketTimeoutMS', 60000);        // Increase socket timeout to 60 seconds
-mongoose.set('bufferTimeoutMS', 60000);       // Increase buffering timeout to 60 seconds
+mongoose.set('serverSelectionTimeoutMS', 600000); // Increase server selection timeout to 60 seconds
+mongoose.set('socketTimeoutMS', 600000);        // Increase socket timeout to 60 seconds
+mongoose.set('bufferTimeoutMS', 600000);       // Increase buffering timeout to 60 seconds
 
 connectDB();
 
